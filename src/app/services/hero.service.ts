@@ -1,10 +1,9 @@
 import {Injectable} from '@angular/core';
 import {Hero} from '../data/hero';
-import {HEROES} from '../data/mock-heroes';
 import {Observable, of} from 'rxjs';
 import {MessageService} from './message.service';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {catchError, map, tap} from 'rxjs/operators';
+import {catchError, tap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +14,7 @@ export class HeroService {
   private heroesUrl = 'api/heroes';  // URL to web api
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
 
   constructor(private http: HttpClient,
@@ -84,11 +83,12 @@ export class HeroService {
       catchError(this.handleError<Hero[]>('searchHeroes', []))
     );
   }
-  /**
-   * Handle Http operation that failed.
-   * Let the app continue.
-   * @param operation - name of the operation that failed
-   * @param result - optional value to return as the observable result
+
+  /*
+   Handle Http operation that failed.
+   Let the app continue.
+   @param operation - name of the operation that failed
+   @param result - optional value to return as the observable result
    */
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

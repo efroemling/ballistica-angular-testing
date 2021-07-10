@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeroSearchComponent } from './hero-search.component';
+import {HttpClientModule} from "@angular/common/http";
 
 describe('HeroSearchComponent', () => {
   let component: HeroSearchComponent;
@@ -8,6 +9,7 @@ describe('HeroSearchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [ HttpClientModule ],
       declarations: [ HeroSearchComponent ]
     })
     .compileComponents();
