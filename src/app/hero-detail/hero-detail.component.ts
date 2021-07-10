@@ -3,7 +3,7 @@ import {Location} from '@angular/common';
 
 import {HeroService} from '../services/hero.service';
 import {Component, OnInit, Input} from '@angular/core';
-import {Hero} from '../hero'
+import {Hero} from '../data/hero'
 
 @Component({
   selector: 'app-hero-detail',

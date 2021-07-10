@@ -40,5 +40,6 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
   providers: [HeroService, MessageService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
 }
