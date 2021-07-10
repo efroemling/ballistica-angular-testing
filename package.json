@@ -1,6 +1,6 @@
 {
-  "name": "yaxpolkdoby.angular",
-  "version": "0.0.0",
+  "name": "ballistica-web",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@angular/animations": "^12.1.1",
