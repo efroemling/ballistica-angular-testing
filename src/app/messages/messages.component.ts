@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from '../services/message.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-messages',
@@ -8,10 +9,18 @@ import { MessageService } from '../services/message.service';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor(public messageService: MessageService) {
+  constructor(public messageService: MessageService,
+              private _snackBar: MatSnackBar,
+  ) {
   }
 
   ngOnInit() {
+  }
+
+  clearClick() {
+    this.messageService.clear();
+    this._snackBar.open('Messages Cleared', 'Nice!', {duration: 3000}
+    );
   }
 
 }

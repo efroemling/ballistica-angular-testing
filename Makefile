@@ -1,2 +1,2 @@
 test:
-	echo HELLO WORLD2
+	npm test -- --no-watch
