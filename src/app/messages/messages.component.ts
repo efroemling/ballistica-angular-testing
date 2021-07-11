@@ -19,7 +19,7 @@ export class MessagesComponent implements OnInit {
 
   clearClick() {
     this.messageService.clear();
-    this._snackBar.open('Messages Cleared', 'Nice!', {duration: 3000}
+    this._snackBar.open('Messages Cleared', 'Nice!', {duration: 1000}
     );
   }
 
