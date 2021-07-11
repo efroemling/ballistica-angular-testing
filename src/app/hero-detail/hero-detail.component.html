@@ -3,8 +3,10 @@
     <h2>{{hero.name | uppercase}} Details</h2>
     <div><span>id: </span>{{hero.id}}</div>
     <div>
-      <label for="hero-name">Hero name: </label>
-      <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Hero Name</mat-label>
+        <input matInput id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+      </mat-form-field>
     </div>
     <button (click)="goBack()">go back</button>
     <button (click)="save()">save</button>

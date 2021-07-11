@@ -7,15 +7,15 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 
-import { DashComponent } from './dash.component';
+import { CardTestComponent } from './card-test.component';
 
 describe('DashComponent', () => {
-  let component: DashComponent;
-  let fixture: ComponentFixture<DashComponent>;
+  let component: CardTestComponent;
+  let fixture: ComponentFixture<CardTestComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [DashComponent],
+      declarations: [CardTestComponent],
       imports: [
         NoopAnimationsModule,
         LayoutModule,
@@ -29,7 +29,7 @@ describe('DashComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashComponent);
+    fixture = TestBed.createComponent(CardTestComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

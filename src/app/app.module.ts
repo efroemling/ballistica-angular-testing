@@ -24,10 +24,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { DashComponent } from './dash/dash.component';
+import { CardTestComponent } from './card-test/card-test.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu'
+import { MatInputModule } from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { MatMenuModule } from '@angular/material/menu'
     DashboardComponent,
     HeroSearchComponent,
     NavComponent,
-    DashComponent,
+    CardTestComponent,
   ],
   imports: [
     MaterialModule,
@@ -72,7 +73,8 @@ import { MatMenuModule } from '@angular/material/menu'
 
     MatCardModule,
 
-    MatMenuModule
+    MatMenuModule,
+    MatInputModule
   ],
   providers: [HeroService, MessageService],
   bootstrap: [AppComponent]
