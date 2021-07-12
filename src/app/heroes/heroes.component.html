@@ -1,15 +1,25 @@
 <div class="basic-container">
   <h2>My Heroes</h2>
-  <ul class="heroes">
-    <li *ngFor="let hero of heroes">
-      <a routerLink="/detail/{{hero.id}}">
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
-      </a>
-      <button class="delete" title="delete hero"
-              (click)="delete(hero)">x
-      </button>
-    </li>
-  </ul>
+<!--  <ul class="heroes">-->
+<!--    <li *ngFor="let hero of heroes">-->
+<!--      <a routerLink="/detail/{{hero.id}}">-->
+<!--        <span class="badge">{{hero.id}}</span> {{hero.name}}-->
+<!--      </a>-->
+<!--      <button class="delete" title="delete hero"-->
+<!--              (click)="delete(hero)">x-->
+<!--      </button>-->
+<!--    </li>-->
+<!--  </ul>-->
+  <div class="heroes">
+    <mat-nav-list>
+      <mat-list-item *ngFor="let hero of heroes">
+        <a matLine routerLink="/detail/{{hero.id}}">{{ hero.name }}</a>
+        <button mat-icon-button (click)="delete(hero)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-nav-list>
+  </div>
   <div>
     <label for="new-hero">Hero name: </label>
     <input id="new-hero" #heroName/>
